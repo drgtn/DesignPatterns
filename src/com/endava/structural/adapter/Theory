@@ -1,0 +1,20 @@
+(Wrapper)
+Convert the interface of a class into another interface clients expect. Adapter
+lets classes work together that couldn't otherwise because of incompatible
+interfaces.
+
+
+- Target (Duck) defines the domain-specific interface that Client uses.
+-  TestClass collaborates with objects conforming to the Target interface.
+- Adaptee (Turkey) defines an existing interface that needs adapting
+
+
+Steps:
+
+1. First you need to implement the interface of the type you are adapting to. This is the interface the clinets aspects to.
+2. Next we need to get a reference to the object we are adapting (via setter or constructor);
+3. Now we implement the methods by calling the metthods from the object we want to adapt.
+
+
+NOTE!
+When the adaptee interface has additional feature oe new behavuior then we can use the DECORATOR + ADAPTER pattern for that

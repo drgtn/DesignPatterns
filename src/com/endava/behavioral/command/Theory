@@ -1,0 +1,18 @@
+COMMAND
+Encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests and support undoable operations.
+(Pentru fiecare metoda din Receiver facem un Command ).Receiver and and Invoker are totally decoupled. It encapsulates invocation.
+
+Macrocomand : One command making executing a list of commands
+LoggingComand : Keeping a history of the commands
+QueCommand : Putting Commands in a que and executing them whenever we want
+Undo :  you can undo what execute() did
+
+Steps:
+1. (FileSystemReceiver) Create an receiver Interface with the corresponding methods;
+2. (UnixFIleSystemReceiver) Create the concrete implementations for Receiver.
+3. (Command) Make a Command interface witch has one method ( execute() ).
+4. (OpenFileCommand) Make the concrete command (The name of the class starts with one of the Receiver methods) that implements the command interface and add a Receiver
+ component via composition and in the execute() implementation call the corresponding method from Receiver via that instance.
+5. (Invoker) Create an Invoker class that has a Command component and make a method (e.g. execute) and in it call the execute method via command.
+
+Note : Provide constructor/setters for the components;

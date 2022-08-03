@@ -1,0 +1,32 @@
+Provide a surrogate or placeholder for another object to control access to it.
+They control and manage access to the real objects.
+The client calls some methods thinking that it does on the remote object(real service),
+but it does on the proxy object, and then the proxy makes call on the remote object.
+
+
+Participants:
+Proxy (CommandExecutorProxy) - maintains a reference that lets the proxy access the real subject.
+                          Proxy may refer to a Subject if the RealSubject and Subject interfaces
+                          are the same.
+                          -provides an interface identical to Subject's so that a proxy can
+                          by substituted for the real subject.
+                          -controls access to the real subject and may be responsible for
+                           creating and deleting it.
+Subject (CommandExecutor)
+                            - defines the common interface for RealSubject and Proxy so that a
+                            Proxy can be used anywhere a RealSubject is expected.
+RealSubject (CommandExecutorImpl)
+                            - defines the real object that the proxy represents.
+
+
+Type of Proxy:
+1. remote proxy - the proxy acts as a local reprezentative for an objects that lives in a different JVM. a method call on the proxy, results in the call
+    being transfered over the wire.
+
+2. virtula proxy - controls acces to a resource that is expensive to create. the proxy usually demands the creation of the remote object untill its needed.
+    After the real object its created, the proxy delegates methods call to it.
+3. protection proxy - controls acces to a resouce based on access rights
+
+SIMILAR PATTERS :
+Adapter changes the interface of the objects it adapts, Proxy implements the same interface
+Decorator adds behavior, Proxy controls access to it

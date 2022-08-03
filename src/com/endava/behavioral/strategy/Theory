@@ -1,0 +1,17 @@
+The Strategy pattern defines a family of alghoritms, encapsulates each one and makes them interchangeble.
+It lets the alghoritm to vary independently from clients that uses it.
+
+Steps:
+1. Create an abstract Stretegy (PaymentStrategy)
+2. Create concrete strategy from the abstract one (PaypalStrategy)
+3. Create the context with a reference via composition to the abstract strategy (PaymentStrategy)
+4. In the context create a method with the implementation that delegates the call to the strategy method;
+5. Passing different kind of concrete strategies we get different behavior.
+
+Implementation:
+1. Defining the Strategy and Context interfaces;
+2. Strategies as interface parameters
+3. Making Strategy objects optional (in case where no strategy is required we need a default code)
+
+NOTES:
+It's often best to implement State and Strategy objects as flyweights.

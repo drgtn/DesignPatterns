@@ -1,0 +1,6 @@
+MEMENTO
+Memento design pattern is used when we want to save the state of an object so that we can restore later on.
+
+Originator – the object for which the state is to be saved. It creates the memento and uses it in future to undo.
+Memento – the object that is going to maintain the state of originator. Its just a POJO.
+Caretaker – the object that keeps track of multiple memento. Like maintaining savepoints.

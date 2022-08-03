@@ -1,0 +1,19 @@
+1. Encapsulate what varies. Identify the aspects of your application that change and separate them and encapsulate  from what stays the same (strategy)
+2. Favor composition over inheritance
+3. Program to an interface , not an implementation.
+4. Strive to loosely coupled designes between objects that interact
+5. Classes should be open for extension, but closed for modification
+6. Depend upon abstraction, not upon concret classes (Dependency Inversion Principle). High level components should not depend on low level onces.
+7. Principle of Least Knowledge - talk only to your immediate friends (facade) :
+    Invoke methods just that beling to:
+        a. the object itself
+        b. objects passed as arguments to the method
+        c. any objects the method creates or initiates
+        d. any components of the object (via composition)
+8. Dont call us, we'll call you (templateMethod/ the superclass are running the show)
+9. A class should have just one reason to change (state)
+
+Similar pattern : Strategy
+         1. The difference is that strategy uses composition, factoryMethod-inheritance
+         2. FactoryMethod - subclasses do some work, but the template keeps control on them
+         3. FactoryMethid - subclasses are dependent on the SuperClass methods

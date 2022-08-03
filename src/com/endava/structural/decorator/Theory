@@ -1,0 +1,24 @@
+DECORATOR - attaches additional responsibilities to an object dynamically.Decorators provide a flexible alternative to subclassing for extending functiomality.
+
+- The decorator has the same supertype as the object they decorate
+- You can use one or more objects to wrap an object
+- We can pass around a decorated object in a place of original object because has the same supertype
+- The decorator adds its own behavior either before and/or after delegating to the object it decorates to do the rest of the job
+- objects can be decorated at any time
+
+- Component (Beverage) defines an interface for objects that can have resposibilities added to the dynamically
+- ConcreteComponent (Expresso) define an object to which additional resposiblities can be attached
+- Decorator - maintains reference to a Component and defines an interface that conforms to Componets's interface
+- ConcreteDecorator - ads responsabilities to the component
+
+Steps:
+1. Create an abstract Component
+2. Create the ConcreteComponent extending from the abstract one
+3. Create the abstract/concrete decorator that extends from the Component
+4. Create a ConcreteDecorator that extends from AbstractorDecorator and have a component via composition from the AbstarctComponent.
+5. When implementing the method from Component we call it by super and after add new functionality.
+
+
+Related Patterns:
+Adapter - decorator changes behavior - adapter changes interface
+Strategy - Decorator changes the skin of an object, strategy changes the guts (inside)

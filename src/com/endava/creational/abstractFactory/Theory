@@ -1,0 +1,18 @@
+Abstract factory pattern provides an interface for creating families of related or dependent Objects without specifieng their concrete classes
+
+Steps:
+1. Create an abstract product (Computer)
+2. Create concrete products that extend the abstract one (PC,Laptop)
+3. Create the abstractFactory class (ComputerAbstractFactory)
+4. Create the concrete factories that implements the abstractFactory(PCFactory,LaptopFactory)
+5. Create the client that uses the abstractFactory and returs an abstract product
+
+
+Implementation:
+1. Factories as singletons
+2. Creating the products -  most common way to do this is to define a factory method
+3. Defining extensible factories - we can pass a string parameter to the client method for creating different kind of abstract products
+
+Difference between AbstractMethod and AbstractFactory
+1. AM uses class to create AF (through inheritance) uses object (composition)
+2. AM creates a single product, AF groups a set of related products

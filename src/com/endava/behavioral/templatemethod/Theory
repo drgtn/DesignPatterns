@@ -1,0 +1,10 @@
+TEMPLATE METHOD
+Provides a skeleton of an algorithm in a method, deferring some steps to subclasses. TM lets subclasses redefine certain steps of an algorithm without changing
+the algorithm structure.
+
+Defines the steps of an algorithm and allows subclasses to provide the implementation for one or more steps;
+
+Steps:
+1. Create an abstract class with a final method that will call other methods. These other methods can be abstract or implemented.
+2. For abstract ones the Concrete implementation for the class will implement them.
+3. We can have hook methods in the abstract method. They are methods that can or can not be overridden in the subclasses. They have some default behaviour or some conditionals.

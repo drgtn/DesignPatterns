@@ -1,0 +1,22 @@
+STATE
+
+Allows an object to alter its behaviour when its internal state changes. The object will apear to change its class.
+
+1. Define the state interface with its behaviour(methods)
+2. Implement with concrete behavior states
+3. Create the concrete/abstract context with instances of the states . Create one more instance state and assign to it one o fthe states. in Constructor initialize the states with the Context instance.
+    In each method from the context,call the necessary method via the transit State instance.
+
+Participants:
+
+Difference between STATE and STRATEGY
+
+STATE-  has different INTENT. We have a set of behaviours encapsulated in state objects; at any time the Context is delegated to one of those states. Over time, the current state changes
+       across the set of state objects to reflect the internal state of the context, so the context behaviour changes over time as well.
+       The client usually knows very little, if anything about the state objects. STate is an alternative to put lot of conditional in your context.
+
+STRATEGY - is a flexible alternative to subclassing.
+
+Uses :
+Flyweight - explains when and how State objects can be shared
+Singleton - state objects are often singletons
